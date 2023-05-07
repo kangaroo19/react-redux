@@ -1,12 +1,13 @@
-import { createStore } from "redux";
+import { createSlice,configureStore } from "@reduxjs/toolkit";
+import counterSlice from "./counterSlice";
+import counterSlice2 from "./counterSlice2";
+//configureStore 통해 스토어를 만들어준다
+const store=configureStore({
+  reducer:{
+    counter1:counterSlice.reducer,
+    counter2:counterSlice2.reducer
+  }
+})
 
 
-export default createStore(function(state,action){
-    if(state===undefined){
-        return {number:0}
-    }
-    if(action.type==='increment'){
-        return {...state,number:state.number+action.size}
-    }
-    return state
-},window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+export default store

@@ -6,11 +6,11 @@ import { reducer } from "./reducer";
 const initialState={value:0}
 const store=createStore(reducer,initialState)
 function App(){
-  const count=useSelector(state=>state.value)
+  
   return (
-    <Provider>
+    <Provider store={store}>
       <div>
-        <Counter count={count}/>
+        <Counter/>
       </div>
     </Provider>
   )

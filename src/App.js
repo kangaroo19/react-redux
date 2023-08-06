@@ -1,10 +1,9 @@
 import { Provider, useSelector } from "react-redux";
-import { createStore } from "redux";
 import Counter from "./components/Counter";
-import { reducer } from "./reducer";
+import { store } from "./store";
 
-const initialState={value:0}
-const store=createStore(reducer,initialState)
+// const store=createStore(reducer)
+
 function App(){
   
   return (

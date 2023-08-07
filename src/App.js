@@ -1,3 +1,5 @@
+//리액트 리덕스만
+
 import { useState } from "react";
 import Left1 from "./components/Left1";
 import Right1 from "./components/Right1";
